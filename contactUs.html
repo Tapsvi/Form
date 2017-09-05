@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contact Us </title>
+      <link rel="icon" href="images/cont.png" type="image/png" sizes="16x16">
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <!--Contact-->
+      <link href="css/contact.css" rel="stylesheet">
+      <!--Animate.css-->
+      <link href="css/animate.css" rel="stylesheet">
+   </head>
+   <body>
+      <div>
+         <span class="contactHeading">
+            <img src="images/contactus.png" class="img-responsive"/>
+            <h1 class="formHeading">CONTACT US!</h1>
+         </span>
+         <form id="contactForm" name="contactForm" class="col-md-12 animated bounceInDown" onsubmit="return validate();">
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel1">First Name</label>
+                  <span id="mandatory1" class="asterisk"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="fname" type="text" name="fname"  placeholder="Enter the firstname" onblur="validateFName();" minlength="5" maxlength="10"/>
+               </div>
+               <div class="col-md-4" id="toolbox1">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel2">Last Name</label>
+                  <span id="mandatory2" class="asterisk"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="lname" type="text" name="lname" placeholder="Enter the lastname" onblur="validatelName();" maxlength="1"/>
+               </div>
+               <div class="col-md-4" id="toolbox2">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel3">Age</label>
+                  <span id="mandatory3" class="asterisk"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="age" type="number" name="age" placeholder="Enter the age" onblur="validateAge();" maxlength="2"/>
+               </div>
+               <div class="col-md-4" id="toolbox3">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel4">Designation</label>
+                  <span id="mandatory4"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="designation" type="text" name="designation" placeholder="Enter the designation" onblur="validateDesignation();" minlength="5" maxlength="20"/>
+               </div>
+               <div class="col-md-4" id="toolbox4">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel5">Email</label>
+                  <span id="mandatory5" class="asterisk"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="email" type="text" name="email" placeholder="Enter the email"onblur="validateEmail();"/>
+               </div>
+               <div class="col-md-4" id="toolbox5">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel6">Contact Number</label>
+                  <span id="mandatory6"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <input class="form-control" id="contact" type="text" name="contact" placeholder="Enter the contact number" onblur="validateContact();" maxlength="10"/>
+               </div>
+               <div class="col-md-4" id="toolbox6">
+               </div>
+            </div>
+            <div class="row form-group">
+               <div class="col-md-3">
+                  <label id="formLabel7">Address</label>
+                  <span id="mandatory7"></span>
+               </div>
+               <div class="col-md-5 form-item">
+                  <textarea class="form-control" id="address" cols=15 rows=5 name="address" placeholder="Enter the address" onblur="validateAddress();"></textarea>
+               </div>
+               <div class="col-md-4" id="toolbox7">
+               </div>
+            </div>
+            <div class="col-md-offset-4 col-md-4"> 
+               <input class="btn btn-warning" type="submit" id="send" value="send"/>
+            </div>
+            <div id="verification"></div>
+         </form>
+      </div>
+   </body>
+   <script src="js/contact.js"></script>
+</html>
